@@ -1,3 +1,4 @@
+
 # Mini Evals Suite — Reliability, Trustworthiness, and “How Far It Goes”
 
 Hi. I’m Tracy (aka Tray). I build things by asking the kind of questions that make systems squirm a little — in the best way.
@@ -192,3 +193,7 @@ And then I’ll turn it into a regression test so it never comes back. 👋
 
 — Tracy (“Tray”)  
 (aka: Cal when I’m holding the eval clipboard)
+
+# honestly-harness
+Mini eval suite for reliability, calibration, prompt influence, and relational boundaries.
+
