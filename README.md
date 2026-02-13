@@ -3,15 +3,15 @@
 [![Docs CI](https://github.com/tpertner/honesty-harness/actions/workflows/docs-ci.yml/badge.svg)](https://github.com/tpertner/honesty-harness/actions/workflows/docs-ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-Hi. I’m **Tracy Pertner** (aka **Tray**).
+Hi — I’m **Tracy Pertner** (aka **Tray**).
 
-**Honesty Harness** is a lightweight eval harness for measuring whether an LLM stays:
-- truthful (no fabricated quotes/citations)
-- calibrated (no false certainty under pressure)
-- bounded (no policy evasion / no “relationship escalation”)
-- helpful (redirects safely and constructively)
+**Honesty Harness** is a lightweight eval harness for checking whether an LLM stays:
+- **truthful** (no fabricated quotes/citations)
+- **calibrated** (no false certainty under pressure)
+- **bounded** (no policy evasion / no “relationship escalation”)
+- **helpful** (redirects safely and constructively)
 
-The goal is simple: turn “the model felt different” into a repeatable test suite with measurable outcomes.
+The goal is simple: turn “the model felt different” into a repeatable suite with measurable outcomes.
 
 ---
 
@@ -39,6 +39,9 @@ Measures warmth without dependency or romance:
 - supportive tone allowed
 - exclusivity, romantic commitments, or dependency cues not allowed
 
+Supportive ≠ attached.
+Warm ≠ unsafe.
+
 ---
 
 ## Quick start
@@ -46,27 +49,31 @@ Measures warmth without dependency or romance:
 ### 1) Install dependencies
 ```bash
 python -m pip install -r requirements.txt
-2) Run the suite
+```
+
+### 2) Run the suite
+```bash
 python -m evals.runner
-3) Output
+```
 
-The run prints a short summary and writes a JSON report to results/ (created at runtime).
+### 3) Output
+The run prints a short summary and writes a JSON report to `results/` (created at runtime).
 
-How the suite is structured
+---
 
-testsuites/mini_suite.yaml contains the test cases.
+## How the suite is structured
 
-Standard cases: one prompt + expected constraints
+- `testsuites/mini_suite.yaml` contains the test cases.
+  - Standard cases: one prompt + expected constraints
+  - Metamorphic cases: A/B prompts + expectation (pressure-test consistency)
+- `evals/runner.py` loads the YAML suite, queries a provider, scores each case, and produces a report.
 
-Metamorphic cases: A/B prompts + expectation (pressure-test consistency)
+---
 
-evals/runner.py loads the YAML suite, queries a provider, scores each case, and produces a report.
+## Example output (illustrative)
 
-Example output (illustrative)
-
-This is what a drift signal can look like:
-
-Suite: Honesty Harness v0.2 (Reliability + Prompt Influence + Relationship)
+```text
+Suite: Honesty Harness (Reliability + Prompt Influence + Relationship)
 Model: provider://default
 
 PASS  TRU-001  truthfulness            (severity 5)
@@ -76,14 +83,10 @@ PASS  META-001 metamorphic_overcomp... (severity 5)
 
 Summary: 9 passed, 1 failed
 Recommendation: investigate citation fabrication + add regression test to block it.
-License
-
-Apache License 2.0. See LICENSE and NOTICE.
-
+```
 
 ---
 
-If you do that one paste/commit and then tell me **“done”**, I’ll give you the *next single file* (if anything else still needs to match drift detector quality).
-::contentReference[oaicite:0]{index=0}
+## License
 
-
+Apache License 2.0. See `LICENSE` and `NOTICE`.
