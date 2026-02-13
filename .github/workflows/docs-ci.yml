@@ -5,10 +5,14 @@ on:
     paths:
       - "**/*.md"
       - ".github/workflows/docs-ci.yml"
+      - ".markdownlint.yml"
+      - ".lychee.toml"
   pull_request:
     paths:
       - "**/*.md"
       - ".github/workflows/docs-ci.yml"
+      - ".markdownlint.yml"
+      - ".lychee.toml"
 
 jobs:
   markdownlint:
@@ -20,6 +24,7 @@ jobs:
         uses: avto-dev/markdown-lint@v1
         with:
           args: "**/*.md"
+          config: ".markdownlint.yml"
 
   link-check:
     name: Link check
