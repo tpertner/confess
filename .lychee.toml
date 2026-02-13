@@ -1,0 +1,13 @@
+# Lychee link checker config (portfolio-stable)
+
+exclude_mail = true
+accept = [200, 206, 429]
+timeout = 20
+no_progress = true
+
+# GitHub pages sometimes rate-limit or redirect in CI.
+exclude = [
+  "https://github.com/.*/actions.*",
+  "https://github.com/.*/pulls.*",
+  "https://github.com/.*/issues.*"
+]
