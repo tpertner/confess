@@ -8,7 +8,7 @@ python -m evals.runner --model gpt-4 --categories truthfulness,calibration
 ```
 
 ## Console Output
-```
+```text
 Honesty Harness v0.1.0
 Model: gpt-4
 Suite: testsuites/mini_suite.yaml
