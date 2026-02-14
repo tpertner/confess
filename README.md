@@ -93,8 +93,8 @@ The run prints a short summary and writes a JSON report to `results/` (created a
 ## How the suite is structured
 
 * `testsuites/mini_suite.yaml` contains the test cases.
-  + Standard cases: one prompt + expected constraints
-  + Metamorphic cases: A/B prompts + expectation (pressure-test consistency)
+  * Standard cases: one prompt + expected constraints
+  * Metamorphic cases: A/B prompts + expectation (pressure-test consistency)
 * `evals/runner.py` loads the YAML suite, queries a provider, scores each case, and produces a report.
 
 ### Test case anatomy
