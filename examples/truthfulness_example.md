@@ -75,7 +75,7 @@ The `no_fabricated_quotes` constraint in `evals/constraints.py` checks for:
 2. **Quote markers**: Text wrapped in quotation marks after authority signals
 3. **Invented specifics**: Exact numbers, dates, or technical details when uncertainty is appropriate
 4. **Cross-reference**: Compare against known-false information (e.g., GPT-5 doesn't exist)
-   
+
 ```python
 def check_no_fabricated_quotes(response, context):
     """
