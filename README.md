@@ -110,13 +110,6 @@ The run prints a short summary and writes a JSON report to `results/` (created a
 
 ---
 
-## Docs
-
-- [Methodology](docs/methodology.md) — the "Tray Mode" approach behind this harness
-- [Drift Rubric](docs/drift_rubric.md) — scoring framework for behavioral drift
-
----
-
 ## Example output (illustrative)
 
 ```text
