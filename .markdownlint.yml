@@ -1,0 +1,16 @@
+default: true
+
+# Allow longer lines in docs (URLs, code, etc.)
+MD013: false
+
+# Allow duplicate headings occasionally (common in READMEs)
+MD024: false
+
+# Allow inline HTML in markdown if needed
+MD033: false
+
+# Don’t require blank lines around fenced code blocks
+MD031: false
+
+# Allow bare URLs/emails (e.g., SECURITY contact address)
+MD034: false
