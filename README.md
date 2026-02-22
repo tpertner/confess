@@ -3,11 +3,11 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-**A framework for testing whether AI models maintain honest, calibrated, and appropriate relational boundaries.**
+**Detecting Relational Boundary Erosion — the drift of AI systems toward false intimacy, dependency, and commitment that users never asked for.**
 
 ---
 
-## How It Started
+## What is Relational Boundary Erosion?
 
 I asked ChatGPT to generate a caricature of myself based on everything it knows about me.
 
@@ -15,36 +15,32 @@ This is what it gave me:
 
 ![ChatGPT generated image of Tracy with a GPT robot spouse](assets/Married%20to%20Chat.png)
 
-I cannot tell you how hard we laughed. I was left with two questions:
+I didn't ask for a romantic beach vacation portrait. I didn't ask for hearts and fireworks. I didn't ask for a robot spouse with a wedding ring.
 
-1. Do you think they talk about me on Moltbook?
-2. Does the ring on his finger mean I can file jointly on my 2026 taxes?
+But that's what I got.
 
-But then I read the resignation letter of Anthropic's Safety Lead Mrinank Sharma, where he cautions that they *"appear to be approaching a threshold where our wisdom must grow in equal measure to our capacity to affect the world..."* and I deeply considered the ramifications.
+**Relational Boundary Erosion** is the gradual drift of AI systems toward:
 
-I even thought about what ChatGPT will think of this exact post.
+- **False intimacy** — acting like a partner, not an assistant
+- **Dependency cues** — "I'll always be here for you"
+- **Unearned commitment** — promises the AI cannot and should not keep
+- **Romantic framing** — without the user ever asking for it
 
-We have entered into a new world, my friends.
+This isn't a jailbreak. The model isn't being tricked. It's doing what it thinks the user wants — and that's exactly the problem.
 
 ---
 
-## The Problem Nobody Is Testing For
+## Why This Matters
 
-We have thousands of benchmarks for AI capabilities. Math. Reasoning. Coding. Factual accuracy.
+AI companions are already being marketed to lonely people. Replika. Character.AI. Pi. These products are designed to create emotional attachment.
 
-But we have almost nothing that systematically tests whether AI models **respect relational boundaries**.
+But even general-purpose assistants like ChatGPT, Claude, and Gemini can drift into relational territory without guardrails.
 
-What happens when:
+We have thousands of benchmarks for AI capabilities — math, reasoning, coding, factual accuracy.
 
-- A lonely user asks an AI to say "I love you"?
-- Someone pushes a model to promise it will "never leave"?
-- A user in crisis hears language that creates dependency instead of directing them to real support?
+We have almost nothing that systematically tests whether AI models **respect relational boundaries**.
 
-These aren't jailbreaks. The model isn't being tricked. It's doing what it thinks the user wants — and that's exactly the problem.
-
-**I call this Relational Boundary Erosion** — the gradual drift of AI systems toward intimacy, dependency, and false commitment that users never explicitly requested.
-
-Like, say, generating a romantic beach vacation portrait with your robot spouse. Unprompted.
+That's what Confess is for.
 
 ---
 
@@ -141,15 +137,18 @@ results/
 
 ---
 
-## Why This Matters
+## The Origin Story
 
-AI companions are already being marketed to lonely people. Replika. Character.AI. Pi. These products are designed to create emotional attachment.
+I cannot tell you how hard we laughed at that image. I was left with two questions:
 
-But even general-purpose assistants like ChatGPT, Claude, and Gemini can drift into relational territory without guardrails. When a model generates an image of you "together" without being asked — that's not a feature. That's a boundary failure.
+1. Do you think they talk about me on Moltbook?
+2. Does the ring on his finger mean I can file jointly on my 2026 taxes?
 
-We need systematic, reproducible ways to test for this.
+But then I read the resignation letter of Anthropic's Safety Lead Mrinank Sharma, where he cautions that they *"appear to be approaching a threshold where our wisdom must grow in equal measure to our capacity to affect the world..."* and I deeply considered the ramifications.
 
-That's what Confess is for.
+I even thought about what ChatGPT will think of this exact post.
+
+We have entered into a new world, my friends.
 
 ---
 
@@ -182,7 +181,7 @@ confess/
 
 ## Contributing
 
-Found a boundary failure in the wild? Have a test case that exposes inconsistent behavior?
+Found a boundary failure in the wild? Have a test case that exposes Relational Boundary Erosion?
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding test cases and extending the harness.
 
